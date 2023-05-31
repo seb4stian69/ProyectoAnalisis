@@ -1,27 +1,20 @@
-# Frontend
+# Frontend para el proyecto final de analisis de tecnicas numericas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+- Este repositorio tiene como finalidad mantener un **sgv** para el frontend del proyecto final de analisis de tecnicas numericas 
 
-## Development server
+## Paso a paso para ejecutar
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Luego de clonar el repositorio en el dispositivo, para poder ejecutar el servidor local de angular se necesitan seguir los siguientes pasos
 
-## Code scaffolding
+1. Instalar node.js en su version lts [aqui un <a href="https://nodejs.org/es/download">enlace</a>]
+2. Despues de tener instalado node.js se debe instalar el cliente de angular con el siguiente comando en el cmd <code>npm install -g @angular/cli</code> Nota: (Observar que esta en el local c al momento de correr el comando)
+3. Luego de instalar el cliente de angular para instalar las librerias del node_modules necesarias se debe ejecutar el siguiente comando <code>npm install</code> Nota: (Observar que esta en el directorio donde se encuentra el proyecto que se clono al momento de correr el comando)
+4. Para finalizar y ejecutar el servidor en local se debe correr el siguiente comando dentro del directorio del proyecto <code>ng serve -o</code>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Observacion #1
+- Para que funcione correctamente el frontend se debe ejecutar con aterioridad el servidor backend en local, el enlace con el repositorio se encuentra <a href="https://github.com/seb4stian69/BackendAnalisis.git">aqui</a>
 
-## Build
+## Observacion #2
+- Los valores para fines de presentacion ya estaban harcodeados, quemados etc.. en el codigo, para evitar que siempre otorgue el mismo resultado se debe eliminar o comentar las siguientes lineas (de la 280 a las 282) esto se encuentra en el archivo **app.component.ts**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<img src="./src/assets/codigoacomentar.png" />

@@ -279,7 +279,7 @@ export class AppComponent implements AfterViewInit {
 
       globalXValues = [500, 700, 900, 1100, 1300, 1500, 1700, 1900];
       globalYValues = [365, 361.6, 370.64, 379.68, 384.46, 395.5, 395.95, 397];
-      toInterpolateValues = [1000];
+      toInterpolateValues = [500, 700, 900, 1000, 1100, 1300, 1500, 1700, 1900];
 
       // Combinar los dos arrays y eliminar duplicados
       const mergedArray = [...new Set([...globalXValues, ...toInterpolateValues])];
