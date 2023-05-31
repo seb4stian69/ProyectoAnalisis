@@ -1,0 +1,162 @@
+/*+ -------------------------- | Variables | -------------------------- +*/
+
+$Mygray: #373737;
+
+/*+ --------------------------  | Mixins |  -------------------------- +*/
+
+@mixin dataBodyElements(){
+  height: 2em;
+  text-align: center;
+  border-radius: 8px;
+  border: none;
+  margin-left: 0.8em;
+  margin-bottom: .5em;
+  margin-top: .5em;
+}
+
+/*+ --------------------------  | Element |  -------------------------- +*/
+
+#parent {
+  margin: 24px 20px;
+}
+
+.titleZone {
+  background-color: $Mygray;
+  width: 20%;
+  height: 3em;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  font-size: larger;
+}
+
+.dataBody {
+
+  background-color: $Mygray;
+  width: 19.9%;
+  height: 24.8em;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+  overflow-y: scroll;
+  border: 10px solid $Mygray;
+
+  &::-webkit-scrollbar{
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track{
+    background-color: #3d3d3d;
+  }
+
+  &::-webkit-scrollbar-thumb{
+    background-color: #2b2a2a;
+  }
+
+  &::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(49, 49, 49);
+  }
+
+  & Select{
+    width: 90.8%;
+    @include dataBodyElements();
+  }
+
+  & input{
+    @include dataBodyElements();
+  }
+
+}
+
+.disabledInput{
+  background-color: rgb(219, 219, 219);
+  color: $Mygray;
+  text-align: center;
+}
+
+#dataBodyTwo {
+  margin-bottom: 0;
+}
+
+#chart {
+
+  width: 78%;
+  height: 95vh;
+  float: right;
+  margin-top: -60em;
+  margin-left: -12em;
+  border: .5px solid $Mygray;
+  padding: 5em 2em;
+
+  & .myChart{
+    width: 98%!important;
+    height: 94%!important;
+    margin-right: 0!important;
+  }
+
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 80%;
+  overflow-x: scroll; 
+  white-space: nowrap;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+@media (min-width: 1366px) and (max-width: 1366px) {
+
+  #parent{
+    margin: 11px 10px;
+  }
+
+  .dataBody{
+
+    width: 19.9%;
+    height: 16em;
+
+  }
+
+  #chart{
+    margin-top: -42.2em;
+    height: 96vh;
+  }
+
+  .disabledInput{
+    width: 42%;
+  }
+
+}

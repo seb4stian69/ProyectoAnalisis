@@ -1,8 +1,12 @@
+import { AppComponent } from './Components/app.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { ChartModule } from 'primeng/chart';
+import { AppRoutingModule } from './Routes/app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InterpolationapiService } from './Components/Service/interpolationapi.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -10,9 +14,15 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    InterpolationapiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

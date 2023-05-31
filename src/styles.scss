@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*+ --------------------------  | Mixins |  -------------------------- +*/
+
+@mixin dataBodyElements(){
+  height: 2em;
+  text-align: center;
+  border-radius: 8px;
+  border: none;
+  margin-left: 0.8em;
+  margin-bottom: .5em;
+  margin-top: .5em;
+}
+
+/*+ --------------------------  | Element |  -------------------------- +*/
+
+.x_value{
+  @include dataBodyElements();
+}
+
+.y_value{
+  @include dataBodyElements();
+}
+
+.x_value_toInterpolate{
+  @include dataBodyElements();
+  width: 91.3%;
+}
+
+@media (min-width: 1366px) and (max-width: 1366px) {
+
+  .y_value{
+    width: 42%;
+  }
+  .x_value{
+    width: 42%;
+  }
+
+  #chart{
+    margin-top: -20em;
+  }
+
+}

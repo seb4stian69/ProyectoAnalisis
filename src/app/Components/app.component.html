@@ -1,0 +1,71 @@
+<div id="parent">
+
+  <div class="dataZone">
+
+    <div class="titleZone">
+      <p id="titleInterpolated" class="title">Valores [X,Y] iniciales</p>
+    </div><br>
+
+    <div id="dataBodyOne" class="dataBody"></div>
+
+  </div>
+
+  <div class="dataZone">
+
+    <div class="titleZone">
+      <p class="title">Valores interpolados</p>
+    </div><br>
+
+    <div id="dataBodyTwo" class="dataBody">
+
+      <select [(ngModel)]="selectedOption" (change)="generateFilteredData()">
+        <option *ngFor="let option of options" [value]="option">{{option}}</option>
+      </select>
+
+      <br>
+
+      <div *ngFor="let point of filteredData">
+        <input class="disabledInput" type="number" [value]="point[0]" disabled>
+        <input class="disabledInput" type="number" [value]="point[1]" disabled>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="chart">
+  </div>
+
+</div>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>xi</th>
+          <th>fxi</th>
+          <ng-container *ngFor="let grupo of arregloDividido; let j = index">
+            <th>Orden-{{ j + 1 }}</th>
+          </ng-container>
+        </tr>
+      </thead>
+
+      <tbody>
+        <ng-container *ngFor="let row of tableData; let i = index">
+          <tr>
+            <td>{{ row.xi }}</td>
+            <td>{{ row.fxi }}</td>
+            <ng-container *ngFor="let columna of arregloDividido[i]; let j = index">
+              <td>{{ arregloDividido[j][i][1] }}</td>
+            </ng-container>
+          </tr>
+        </ng-container>
+      </tbody>
+
+    </table>
+
+  </div>
+</div>
