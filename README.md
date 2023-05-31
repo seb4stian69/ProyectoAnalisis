@@ -12,7 +12,7 @@ Luego de clonar el repositorio en el dispositivo, para poder ejecutar el servido
 4. Para finalizar y ejecutar el servidor en local se debe correr el siguiente comando dentro del directorio del proyecto <code>ng serve -o</code>
 
 ## Observacion #1
-- Para que funcione correctamente el frontend se debe ejecutar con aterioridad el servidor backend en local, el enlace con el repositorio se encuentra <a href="https://github.com/seb4stian69/BackendAnalisis.git">aqui</a>
+- Para que funcione correctamente el frontend se debe ejecutar con anterioridad el servidor backend en local, el enlace con el repositorio se encuentra <a href="https://github.com/seb4stian69/BackendAnalisis.git">aqui</a>
 
 ## Observacion #2
 - Los valores para fines de presentacion ya estaban harcodeados, quemados etc.. en el codigo, para evitar que siempre otorgue el mismo resultado se debe eliminar o comentar las siguientes lineas (de la 280 a las 282) esto se encuentra en el archivo **app.component.ts**
